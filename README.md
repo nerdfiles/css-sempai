@@ -53,7 +53,7 @@ var styleInterface = {
           function getRemoteStyleInterface() {
             return JSON.parse($.ajax({
               type  : "GET",
-              url   : '/v/1.0.0+222/WebPage.breadcrumb',
+              url   : '/v/1.0.0+222/!WebPage.breadcrumb',
               async : false
             }).responseText);
           }
