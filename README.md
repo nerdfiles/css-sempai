@@ -42,6 +42,39 @@ require(['stylesheet'], function (stylesheet) {
 });
 ```
 
+Or (the [Openchain][3] idea):
+
+```javascript
+var styleInterface = {
+  "html": {
+    "body": {
+      "#WebPage": {
+        ".breadcrumb": function () {
+          function getRemoteStyleInterface() {
+            return JSON.parse($.ajax({
+              type  : "GET",
+              url   : '/v/1.0.0+222/WebPage.breadcrumb',
+              async : false
+            }).responseText);
+          }
+          return getRemoteStyleInterface();
+        }
+      }
+    }
+  }
+};
+new Descartes(styleInterface)
+```
+
+```javascript
+var styleInterface = JSON.parse($.ajax({
+  type  : "GET",
+  url   : '/v/1.0.0+222/WebPage.breadcrumb',
+  async : false
+}).responseText);
+new Descartes(styleInterface)
+```
+
 ## Case Use
 
 1. Would be neat for server-side variable loading of dynamic CSS Sekizai conditionings in Django.
