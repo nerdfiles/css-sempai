@@ -1,6 +1,6 @@
 # css-sempai
 
-Yeah, I said it.
+Yeah, I said it. Or may re-implement `json-sempai` as a client-side or server-side template layer generator.
 
 ## Do [this][0]:
 
