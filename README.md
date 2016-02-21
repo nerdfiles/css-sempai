@@ -35,9 +35,10 @@ Yeah, I said it. Or may re-implement `json-sempai` as a client-side middleware o
 If we were to try this end-to-end in JS.
 
 ```javascript
-require([‘stylesheet’], function (stylesheet) {
-  var styleInterface = new Descartes(stylesheet);
-  return styleInterface;
+// Sempai loaded elsewhere...
+require(['stylesheet'], function (stylesheet) {
+  var styleInterface = Sempai(stylesheet);
+  return new Descartes(styleInterface);
 });
 ```
 
