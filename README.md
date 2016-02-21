@@ -30,6 +30,17 @@ Yeah, I said it. Or may re-implement `json-sempai` as a client-side middleware o
 >>> stylesheet.html.body.section[‘max-width’]
 ```
 
+### That is:
+
+If we were to try this end-to-end in JS.
+
+```javascript
+require([‘stylesheet’], function (stylesheet) {
+  var styleInterface = new Descartes(stylesheet);
+  return styleInterface;
+});
+```
+
 ## Case Use
 
 1. Would be neat for server-side variable loading of dynamic CSS Sekizai conditionings in Django.
