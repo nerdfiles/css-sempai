@@ -27,7 +27,7 @@ Yeah, I said it. Or may re-implement `json-sempai` as a client-side middleware o
 >>> import stylesheet
 >>> stylesheet
 <module 'stylesheet' from 'stylesheet.json'>
->>> stylesheet.html.body.section[‘max-width’]
+>>> stylesheet.html.body.section['max-width']
 ```
 
 ### That is:
