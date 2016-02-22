@@ -69,7 +69,7 @@ new Descartes(styleInterface)
 ```javascript
 var styleInterface = JSON.parse($.ajax({
   type  : "GET",
-  url   : '/v/1.0.0+222/WebPage.breadcrumb',
+  url   : '/v/1.0.0+222/!WebPage.breadcrumb',
   async : false
 }).responseText);
 new Descartes(styleInterface)
