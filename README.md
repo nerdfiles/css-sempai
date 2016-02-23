@@ -108,6 +108,48 @@ Runs:
 
 Basically treat keys in CSS like `cmd` fields in Grunt to pre/post hook operations.
 
+## Dealing with Pseudoselectors
+
+Your CSS wants to say this to sempai:
+
+```json
+    {
+      "links": {
+        "self": "/url"
+      },
+      "data": [{
+        "relationships": {
+          "div": {
+            "links": {
+              "hover": "/uri"
+            },
+            "data": [{
+              "id": 1,
+              "relationships": {
+                "h1": {
+                  "links": {
+                    "target": "/uri"
+                  },
+                  "data": [{
+                    "id": 2
+                  }]
+                }
+              }
+            }],
+            "included": [{
+              "id": 2,
+              "type": "h1"
+            }]
+          }
+        }
+      }],
+      "included": [{
+        "id": 1,
+        "type": "div"
+      }]
+    }
+```
+
 —
 
 [0]: https://descartes.io/
