@@ -156,6 +156,8 @@ Your CSS wants to say this to sempai:
 
 At the end of the day, sempai makes for us a cssapi.
 
+<small>Use `jq` to ease querying through this beast’s fur.</small>
+
 —
 
 [0]: https://descartes.io/
