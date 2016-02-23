@@ -2,7 +2,11 @@
 
 Yeah, I said it. Or may re-implement `json-sempai` as a client-side middleware or server-side templated style generator.
 
-## Do [this][0]:
+## Ideally:
+
+    /* some css */
+
+## Becomes [this][0]:
 
 ```json
 {
@@ -108,7 +112,7 @@ Runs:
 
 Basically treat keys in CSS like `cmd` fields in Grunt to pre/post hook operations.
 
-## Dealing with Pseudoselectors
+## (But really...) Dealing with Pseudoselectors
 
 Your CSS wants to say this to sempai:
 
@@ -149,6 +153,8 @@ Your CSS wants to say this to sempai:
   }]
 }
 ```
+
+At the end of the day, sempai makes for us a cssapi.
 
 —
 
