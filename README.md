@@ -158,6 +158,13 @@ At the end of the day, sempai makes for us a cssapi.
 
 <small>Use `jq` to ease querying through this beast’s fur.</small>
 
+## WAT ?
+
+`"hover": "/uri"` is specifying an endpoint to download more CSS. So something like a Descartes wrapper would exist to process such keys as pre-compile phase interpolations. 
+So sempai might see pseudoselectors and then rip them out like weeds, leaving instead a relative URI to inform the relevant Descartes interface wrapper. 
+Pre-compile Phase Interpolated Hooks as Pseudoselectors (:nth-child(), :hover, etc.) are expected by Descartes Transformation moments in the interface with 
+with CSSAPI spec.
+
 —
 
 [0]: https://descartes.io/
