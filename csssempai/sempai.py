@@ -1,8 +1,10 @@
 import contextlib
 import imp
 import json
+import tinycss
 import os
 import sys
+import itertools
 
 
 class DottedDict(dict):
@@ -51,19 +53,22 @@ class SempaiLoader(object):
         mod.__file__ = self.css_path
         mod.__loader__ = self
 
-        decoder = json.jsonDecoder(object_hook=DottedDict)
+        #decoder = json.JSONDecoder(object_hook=DottedDict)
+        parser = tinycss.make_parser('page3')
 
         try:
-            with open(self.css_path) as f:
-                d = decoder.decode(f.read())
-        except ValueError:
-            raise ImportError(
-                '"{name}" does not contain valid css.'.format(name=self.css_path))
+            stylesheet = parser.parse_stylesheet_file(self.css_path)
         except:
             raise ImportError(
-                'Could not open "{name}".'.format(name=self.css_path))
+                'Could not open file.')
 
-        mod.__dict__.update(d)
+        b = {}
+
+        #import pdb; pdb.set_trace()
+        for i in stylesheet.rules:
+            b[i.selector.as_css()] = i.declarations
+
+        mod.__dict__.update(b)
 
         sys.modules[name] = mod
         return mod
