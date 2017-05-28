@@ -4,3 +4,5 @@ css_sempai.egg-info/
 build/
 csstest.css
 tmp/
+*.pyc
+npm-debug.log
